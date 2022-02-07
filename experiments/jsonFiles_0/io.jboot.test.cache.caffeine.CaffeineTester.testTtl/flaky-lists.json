@@ -1,0 +1,1 @@
+{"dts":[{"name":"io.jboot.test.cache.caffeine.CaffeineTester.testTtl","intended":{"order":[],"result":"PASS","testRunId":"2569292575248-841089bc-bddd-4310-a197-a705f3c4461f"},"revealed":{"order":["io.jboot.test.cache.j2cache.J2CacheTester.testGet"],"result":"ERROR","testRunId":"2550350212668-4dcf27c9-b813-4b97-8500-6295dc119858"}}]}

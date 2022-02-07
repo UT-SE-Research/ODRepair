@@ -1,0 +1,1 @@
+{"dts":[{"name":"org.apache.dubbo.config.validation.ValidationTest.testGenericValidation","intended":{"order":[],"result":"PASS","testRunId":"13677952940121-ac867ff6-5570-41c2-a25c-6f16e32309f9"},"revealed":{"order":["org.apache.dubbo.config.AbstractInterfaceConfigTest.testLoadRegistries"],"result":"ERROR","testRunId":"9946517286508-0a698699-9c8a-4618-97d3-d02e6d4c1237"}}]}

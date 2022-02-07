@@ -1,0 +1,1 @@
+{"dts":[{"name":"com.openhtmltopdf.slf4j.Slf4JLoggerTest.testLogger","intended":{"order":[],"result":"PASS","testRunId":"1621780602834-2d524bcf-e5b7-4952-b92f-39ff2337578a"},"revealed":{"order":["com.openhtmltopdf.slf4j.Slf4JLoggerTest.testLoggerWarnLevel"],"result":"ERROR","testRunId":"1621780607160-31defe43-fb56-4e3f-86ca-ae4568245015"}}]}

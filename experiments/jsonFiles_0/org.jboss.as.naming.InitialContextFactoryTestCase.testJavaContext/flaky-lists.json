@@ -1,0 +1,1 @@
+{"dts":[{"name":"org.jboss.as.naming.InitialContextFactoryTestCase.testJavaContext","intended":{"order":[],"result":"PASS","testRunId":"2569292575248-841089bc-bddd-4310-a197-a705f3c4461f"},"revealed":{"order":["org.jboss.as.naming.WritableServiceBasedNamingStoreTestCase.testPermissions"],"result":"ERROR","testRunId":"2550350212668-4dcf27c9-b813-4b97-8500-6295dc119858"}}]}
