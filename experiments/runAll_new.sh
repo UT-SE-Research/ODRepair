@@ -50,10 +50,9 @@ do
         cd $inputProjRoot/$slug
         mvn clean install ${PL} ${MVNOPTIONS}
     )
-    pom_modify_script=$currentDir/projectsInstall/pom-modify-ifixplus/modify-project.sh
+    pom_modify_script=$currentDir/pom-modify-ifixplus/modify-project.sh
     $pom_modify_script $inputProjRoot/$slug
   fi
   $currentDir/run_debugging_tools_new.sh $slug $sha $odtest $module
-
+  mkdir _downloads
 done < "$input"
-

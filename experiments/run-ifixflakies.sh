@@ -43,7 +43,7 @@ MVNOPTIONS="-DskipTests -Dgpg.skip -Dcheckstyle.skip=true -Denforcer.skip=true -
 
 #python3 run.py # Do not rerun generation part, just use what is already there
 
-for l in $(cat x-results.csv); do
+for l in $(cat output/result.csv); do
     # Skip if header
     if [[ ${l} == \#* ]]; then
         continue
