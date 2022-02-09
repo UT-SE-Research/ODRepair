@@ -23,9 +23,9 @@ EVO_GEN_TESTS_DIR = SCRIPT_DIR + '/evo_gen_tests'
 #EXP_CSV = SCRIPT_DIR + '/results.csv'
 # EXP_CSV = SCRIPT_DIR + '/x-results.csv'
 EXP_CSV = SCRIPT_DIR + '/output/result.csv'
-# TOOL_JAR = '${HOME}/.m2/repository/org/reset-finder/reset-finder/1.0-SNAPSHOT/reset-finder-1.0-SNAPSHOT.jar:' + 
-# TOOL_JAR = SCRIPT_DIR + '/libs/commons-cli-1.3.1.jar:' + SCRIPT_DIR + '/libs/commons-io-2.4.jar:' + SCRIPT_DIR + '/libs/hamcrest-core-1.3.jar:'  + SCRIPT_DIR + '/libs/commons-codec-1.6.jar:'  + SCRIPT_DIR + '/libs/junit-4.12.jar:'  + SCRIPT_DIR + '/libs/bcel-6.3.jar:' + '${HOME}/.m2/repository/org/reset-finder/reset-finder/1.0-SNAPSHOT/reset-finder-1.0-SNAPSHOT.jar'
-TOOL_JAR = '/home/chopinli/project/reseter-finder/target/reset-finder-1.0-SNAPSHOT.jar' # SCRIPT_DIR + '/libs/reset-finder-1.0-SNAPSHOT.jar'
+TOOL_JAR = '${HOME}/.m2/repository/org/reset-finder/reset-finder/1.0-SNAPSHOT/reset-finder-1.0-SNAPSHOT.jar' 
+CP_JAR = SCRIPT_DIR + '/libs/commons-cli-1.3.1.jar:' + SCRIPT_DIR + '/libs/commons-io-2.4.jar:' + SCRIPT_DIR + '/libs/hamcrest-core-1.3.jar:'  + SCRIPT_DIR + '/libs/commons-codec-1.6.jar:'  + SCRIPT_DIR + '/libs/junit-4.12.jar:'  + SCRIPT_DIR + '/libs/bcel-6.3.jar:' + '${HOME}/.m2/repository/org/reset-finder/reset-finder/1.0-SNAPSHOT/reset-finder-1.0-SNAPSHOT.jar'
+# TOOL_JAR = '/home/chopinli/project/reseter-finder/target/reset-finder-1.0-SNAPSHOT.jar' # SCRIPT_DIR + '/libs/reset-finder-1.0-SNAPSHOT.jar'
 RANDOOP_JAR = SCRIPT_DIR + '/libs/randoop-all-4.2.6.jar'
 JUNIT_JAR = SCRIPT_DIR + '/libs/junit-4.13.2.jar'
 HAMCREST_JAR = SCRIPT_DIR + '/libs/hamcrest-core-1.3.jar'
@@ -128,14 +128,23 @@ def runAnalysis(project_name, project_sha, test_fqn, field_fqn,
         '/' + field_fqn + '.xml'
     start_time = time.time()
     # map list resetters
-    sub.run('java -jar ' + tool_jar + \
+    cmd = 'java -cp \"' + SCRIPT_DIR + '/libs/commons-cli-1.3.1.jar:' + SCRIPT_DIR + '/libs/commons-io-2.4.jar:' + SCRIPT_DIR + '/libs/hamcrest-core-1.3.jar:'  + SCRIPT_DIR + '/libs/commons-codec-1.6.jar:'  + SCRIPT_DIR + '/libs/junit-4.12.jar:'  + SCRIPT_DIR + '/libs/bcel-6.3.jar:' + '${HOME}/.m2/repository/org/reset-finder/reset-finder/1.0-SNAPSHOT/reset-finder-1.0-SNAPSHOT.jar\"' + \
+            ' org.reseterfinder.Main' + \
+            ' -field \"' + field_fqn.replace('$', '\\$') + '\"' + \
+            ' -klasspath ' + downloads_dir + '/' + project_name + \
+            ' -mode map-list-resetters' + \
+            ' -xml \"' + xml_file.replace('$', '\\$') + '\"'
+    print('I AM RUNNING: ' + cmd)
+    sub.run('java -cp \"' + CP_JAR + '\"' + \
+            ' org.reseterfinder.Main' + \
             ' -field \"' + field_fqn.replace('$', '\\$') + '\"' + \
             ' -klasspath ' + downloads_dir + '/' + project_name + \
             ' -mode map-list-resetters' + \
             ' -xml \"' + xml_file.replace('$', '\\$') + '\"',
             shell=True, stdout=open(analysis_log, 'w'), stderr=sub.STDOUT)
     # putstatic and getstatic
-    sub.run('java -jar ' + tool_jar + \
+    sub.run('java -cp \"' + CP_JAR + '\"'  + \
+            ' org.reseterfinder.Main' + \
             ' -field \"' + field_fqn.replace('$', '\\$') + '\"' + \
             ' -klasspath ' + downloads_dir + '/' + project_name + \
             ' -mode putstatic', shell=True,
@@ -210,7 +219,8 @@ def runMinePrims(project_name, project_sha, test_fqn, field_fqn,
     analysis_log = client_result_dir + '/prims.txt'
     start_time = time.time()
     # map list resetters
-    sub.run('java -jar ' + tool_jar + \
+    sub.run('java -cp \"' + CP_JAR + '\"' + \
+            ' org.reseterfinder.Main' + \
             ' -field \"' + field_fqn.replace('$', '\\$') + '\"' + \
             ' -klasspath ' + downloads_dir + '/' + project_name + \
             ' -mode mine-prims' + \
@@ -233,7 +243,8 @@ def runMinePrimsAllClasses(project_name, project_sha, test_fqn, field_fqn,
     analysis_log = client_result_dir + '/prims.txt'
     start_time = time.time()
     # map list resetters
-    sub.run('java -jar ' + tool_jar + \
+    sub.run('java -cp \"' + CP_JAR + '\"'  + \
+            ' org.reseterfinder.Main' + \
             ' -field \"' + field_fqn.replace('$', '\\$') + '\"' + \
             ' -klasspath ' + downloads_dir + '/' + project_name + \
             ' -mode mine-prims-all-classes' + \
@@ -260,7 +271,8 @@ def runFindRefClasses(project_name, project_sha, test_fqn, field_fqn,
         classpath += ':/tmp/jars/spring-security-core-5.0.9.RELEASE.jar'
     if project_name == 'incubator-dubbo':
         classpath += ':' + SCRIPT_DIR + '/libs/fst-2.48-jdk-6.jar'
-    sub.run('java -jar ' + tool_jar + \
+    sub.run('java -cp \"' + CP_JAR + '\"' + \
+            ' org.reseterfinder.Main' + \
             ' -field \"' + field_fqn.replace('$', '\\$') + '\"' + \
             ' -klasspath ' + classpath + \
             ' -mode ref-classes-transitive',
@@ -586,7 +598,8 @@ def extractResetterGetters(resetter_fqn, project_name, project_sha,
     analysis_log = output_dir + '/resetter-getters.txt'
     start_time = time.time()
     # map list resetters
-    sub.run('java -jar ' + tool_jar + \
+    sub.run('java -cp \"' + CP_JAR + '\"' + \
+            ' org.reseterfinder.Main' + \
             ' -klasspath ' + downloads_dir + '/' + project_name + \
             ' -mode find-callee-getters' + \
             ' -resetter \"' + resetter_fqn.replace('$', '\\$') + '\"',
