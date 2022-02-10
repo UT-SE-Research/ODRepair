@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL SETUPTEARDOWN
+MODIFIED: io.jboot.test.cache.j2cache.J2CacheTester.testGet
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/jboot/src/test/java/io/jboot/test/cache/j2cache/J2CacheTester.java
+CLEANER: io.jboot.test.cache.caffeine.CaffeineTester.testDue
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/jboot/src/test/java/io/jboot/test/cache/caffeine/CaffeineTester.java
+POLLUTER: N/A
+POLLUTER FILE: N/A
+ORIGINAL CLEANER SIZE: 7
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 31.483999967575073
+==========================
+@@ -21,0 +21,3 @@
++ {
++     JbootApplication.setBootArg("jboot.cache.type", "caffeine");
++ }

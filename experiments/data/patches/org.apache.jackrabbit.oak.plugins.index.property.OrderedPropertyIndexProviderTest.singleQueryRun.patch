@@ -1,0 +1,25 @@
+STATUS: CLEANER DOES NOT FIX
+MODIFIED: N/A
+MODIFIED FILE: N/A
+CLEANER: org.apache.jackrabbit.oak.plugins.index.property.TestGroup100Case0.test050
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/jackrabbit-oak/oak-core/src/test/java/org/apache/jackrabbit/oak/plugins/index/property/TestGroup100Case0.java
+POLLUTER: org.apache.jackrabbit.oak.plugins.index.property.OrderedPropertyIndexProviderTest.multipleQueryRuns
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/jackrabbit-oak/oak-core/src/test/java/org/apache/jackrabbit/oak/plugins/index/property/OrderedPropertyIndexProviderTest.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 6
+ELAPSED TIME: 0.0
+==========================
+@@ -0,0 +0,13 @@
++ {
++     {
++     }
++     {
++     }
++     if (debug)
++         System.out.format("%n%s%n", "TestGroup100Case0.test050");
++     org.apache.jackrabbit.oak.plugins.index.property.OrderedPropertyIndexProvider.setThreshold((int) (short) 1);
++     {
++     }
++     {
++     }
++ }

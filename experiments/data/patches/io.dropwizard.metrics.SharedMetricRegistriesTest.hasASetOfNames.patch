@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: io.dropwizard.metrics.SharedMetricRegistriesTest.hasASetOfNames
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/light-4j/metrics/src/test/java/io/dropwizard/metrics/SharedMetricRegistriesTest.java
+CLEANER: io.dropwizard.metrics.TestGroup100Case0.test002
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/light-4j/metrics/src/test/java/io/dropwizard/metrics/TestGroup100Case0.java
+POLLUTER: io.dropwizard.metrics.SharedMetricRegistriesTest.errorsWhenDefaultAlreadySet
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/light-4j/metrics/src/test/java/io/dropwizard/metrics/SharedMetricRegistriesTest.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 36.73799991607666
+==========================
+@@ -43,0 +43,3 @@
++ {
++     io.dropwizard.metrics.SharedMetricRegistries.clear();
++ }

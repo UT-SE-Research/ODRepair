@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: com.alibaba.csp.sentinel.config.SentinelConfigTest.testDefaultConfig
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/Sentinel/sentinel-core/src/test/java/com/alibaba/csp/sentinel/config/SentinelConfigTest.java
+CLEANER: com.alibaba.csp.sentinel.config.TestGroup100Case0.test181
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/Sentinel/sentinel-core/src/test/java/com/alibaba/csp/sentinel/config/TestGroup100Case0.java
+POLLUTER: com.alibaba.csp.sentinel.config.SentinelConfigTest.testColdFactoryLargerThanOne
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/Sentinel/sentinel-core/src/test/java/com/alibaba/csp/sentinel/config/SentinelConfigTest.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 32.132000207901
+==========================
+@@ -24,0 +24,3 @@
++ {
++     com.alibaba.csp.sentinel.config.SentinelConfig.setConfig("csp.sentinel.flow.cold.factor", "");
++ }

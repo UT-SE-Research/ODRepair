@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: org.apache.hadoop.yarn.server.timelineservice.reader.TestTimelineReaderWebServices.testGetAppAttempts
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/test/java/org/apache/hadoop/yarn/server/timelineservice/reader/TestTimelineReaderWebServices.java
+CLEANER: org.apache.hadoop.yarn.server.timelineservice.reader.TestGroup100Case0.test013
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/test/java/org/apache/hadoop/yarn/server/timelineservice/reader/TestGroup100Case0.java
+POLLUTER: org.apache.hadoop.yarn.server.timelineservice.reader.TestTimelineReaderMetrics.testTimelineReaderMetrics
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-server/hadoop-yarn-server-timelineservice/src/test/java/org/apache/hadoop/yarn/server/timelineservice/reader/TestTimelineReaderMetrics.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 57.29900002479553
+==========================
+@@ -595,0 +595,3 @@
++ {
++     org.apache.hadoop.metrics2.lib.DefaultMetricsSystem.shutdown();
++ }

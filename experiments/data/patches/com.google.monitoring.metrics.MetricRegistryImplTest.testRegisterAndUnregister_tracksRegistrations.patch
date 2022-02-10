@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: com.google.monitoring.metrics.MetricRegistryImplTest.testRegisterAndUnregister_tracksRegistrations
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/java-monitoring-client-library/metrics/src/test/java/com/google/monitoring/metrics/MetricRegistryImplTest.java
+CLEANER: com.google.monitoring.metrics.TestGroup100Case0.test1
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/java-monitoring-client-library/metrics/src/test/java/com/google/monitoring/metrics/TestGroup100Case0.java
+POLLUTER: com.google.monitoring.metrics.MetricReporterTest.testShutDown_enqueuesBatchAndPoisonPill
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/java-monitoring-client-library/metrics/src/test/java/com/google/monitoring/metrics/MetricReporterTest.java
+ORIGINAL CLEANER SIZE: 106
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 245.87700009346008
+==========================
+@@ -48,0 +48,4 @@
++ {
++     com.google.monitoring.metrics.MetricRegistryImpl metricRegistryImpl0 = com.google.monitoring.metrics.MetricRegistryImpl.getDefault();
++     metricRegistryImpl0.unregisterAllMetrics();
++ }

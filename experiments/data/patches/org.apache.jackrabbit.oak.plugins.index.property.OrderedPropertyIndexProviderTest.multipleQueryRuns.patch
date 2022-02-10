@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: org.apache.jackrabbit.oak.plugins.index.property.OrderedPropertyIndexProviderTest.multipleQueryRuns
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/jackrabbit-oak/oak-core/src/test/java/org/apache/jackrabbit/oak/plugins/index/property/OrderedPropertyIndexProviderTest.java
+CLEANER: org.apache.jackrabbit.oak.plugins.index.property.OrderedPropertyIndexProviderTest.singleQueryRun
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/jackrabbit-oak/oak-core/src/test/java/org/apache/jackrabbit/oak/plugins/index/property/OrderedPropertyIndexProviderTest.java
+POLLUTER: N/A
+POLLUTER FILE: N/A
+ORIGINAL CLEANER SIZE: 8
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 336.0550000667572
+==========================
+@@ -69,0 +69,4 @@
++ {
++     before();
++     executeQuery("SELECT * FROM [oak:Unstructured]", SQL2);
++ }

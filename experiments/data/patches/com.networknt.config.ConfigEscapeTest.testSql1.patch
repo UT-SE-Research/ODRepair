@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: com.networknt.config.ConfigEscapeTest.testSql1
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/light-4j/config/src/test/java/com/networknt/config/ConfigEscapeTest.java
+CLEANER: com.networknt.config.TestGroup100Case0.test1
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/light-4j/config/src/test/java/com/networknt/config/TestGroup100Case0.java
+POLLUTER: com.networknt.config.ConfigInjectionTest.testGetInjectValueIssue744
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/light-4j/config/src/test/java/com/networknt/config/ConfigInjectionTest.java
+ORIGINAL CLEANER SIZE: 106
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 137.36299991607666
+==========================
+@@ -40,0 +40,4 @@
++ {
++     com.networknt.config.Config config0 = com.networknt.config.Config.getInstance();
++     config0.clear();
++ }

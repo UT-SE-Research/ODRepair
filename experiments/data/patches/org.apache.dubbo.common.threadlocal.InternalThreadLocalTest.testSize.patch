@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: org.apache.dubbo.common.threadlocal.InternalThreadLocalTest.testSize
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-common/src/test/java/org/apache/dubbo/common/threadlocal/InternalThreadLocalTest.java
+CLEANER: org.apache.dubbo.common.threadlocal.TestGroup100Case0.test1
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-common/src/test/java/org/apache/dubbo/common/threadlocal/TestGroup100Case0.java
+POLLUTER: org.apache.dubbo.common.threadlocal.InternalThreadLocalTest.testSetAndGet
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-common/src/test/java/org/apache/dubbo/common/threadlocal/InternalThreadLocalTest.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 37.763999938964844
+==========================
+@@ -81,0 +81,3 @@
++ {
++     org.apache.dubbo.common.threadlocal.InternalThreadLocalMap.remove();
++ }

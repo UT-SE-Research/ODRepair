@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: org.apache.dubbo.rpc.cluster.support.ForkingClusterInvokerTest.testClearRpcContext
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-cluster/src/test/java/org/apache/dubbo/rpc/cluster/support/ForkingClusterInvokerTest.java
+CLEANER: org.apache.dubbo.rpc.cluster.support.TestGroup100Case0.test1
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-cluster/src/test/java/org/apache/dubbo/rpc/cluster/support/TestGroup100Case0.java
+POLLUTER: org.apache.dubbo.rpc.cluster.router.tag.TagRouterTest.testRoute_matchDefault
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-cluster/src/test/java/org/apache/dubbo/rpc/cluster/router/tag/TagRouterTest.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 35.765000104904175
+==========================
+@@ -123,0 +123,3 @@
++ {
++     org.apache.dubbo.common.threadlocal.InternalThreadLocalMap.remove();
++ }

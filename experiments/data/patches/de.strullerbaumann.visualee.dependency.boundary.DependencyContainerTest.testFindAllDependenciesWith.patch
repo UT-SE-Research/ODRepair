@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: de.strullerbaumann.visualee.dependency.boundary.DependencyContainerTest.testFindAllDependenciesWith
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/visualee/src/test/java/de/strullerbaumann/visualee/dependency/boundary/DependencyContainerTest.java
+CLEANER: de.strullerbaumann.visualee.dependency.boundary.TestGroup100Case0.test222
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/visualee/src/test/java/de/strullerbaumann/visualee/dependency/boundary/TestGroup100Case0.java
+POLLUTER: de.strullerbaumann.visualee.filter.entity.SourcecodeFilterTest.testIsOkIncludeTrue
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/visualee/src/test/java/de/strullerbaumann/visualee/filter/entity/SourcecodeFilterTest.java
+ORIGINAL CLEANER SIZE: 29
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 219.4170000553131
+==========================
+@@ -102,0 +102,4 @@
++ {
++     de.strullerbaumann.visualee.filter.boundary.FilterContainer filterContainer0 = de.strullerbaumann.visualee.filter.boundary.FilterContainer.getInstance();
++     filterContainer0.clear();
++ }

@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: io.undertow.websockets.jsr.test.annotated.AnnotatedEndpointTest.testCloseReason
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/undertow/websockets-jsr/src/test/java/io/undertow/websockets/jsr/test/annotated/AnnotatedEndpointTest.java
+CLEANER: io.undertow.websockets.jsr.test.annotated.TestGroup100Case0.test2
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/undertow/websockets-jsr/src/test/java/io/undertow/websockets/jsr/test/annotated/TestGroup100Case0.java
+POLLUTER: io.undertow.websockets.jsr.test.annotated.AnnotatedEndpointTest.testErrorHandling
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/undertow/websockets-jsr/src/test/java/io/undertow/websockets/jsr/test/annotated/AnnotatedEndpointTest.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 38.325000047683716
+==========================
+@@ -184,0 +184,3 @@
++ {
++     io.undertow.websockets.jsr.test.annotated.AnnotatedClientEndpoint.reset();
++ }

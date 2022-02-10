@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: net.sf.marineapi.nmea.parser.SentenceFactoryTest.testRegisterParserWithAlternativeBeginChar
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/marine-api/src/test/java/net/sf/marineapi/nmea/parser/SentenceFactoryTest.java
+CLEANER: net.sf.marineapi.ais.event.TestGroup100Case0.test220
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/marine-api/src/test/java/net/sf/marineapi/ais/event/TestGroup100Case0.java
+POLLUTER: net.sf.marineapi.nmea.parser.SentenceFactoryTest.testRegisterParserWithAlternativeBeginChar
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/marine-api/src/test/java/net/sf/marineapi/nmea/parser/SentenceFactoryTest.java
+ORIGINAL CLEANER SIZE: 18
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 272.4760000705719
+==========================
+@@ -235,0 +235,4 @@
++ {
++     net.sf.marineapi.nmea.parser.SentenceFactory sentenceFactory0 = net.sf.marineapi.nmea.parser.SentenceFactory.getInstance();
++     sentenceFactory0.reset();
++ }

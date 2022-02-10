@@ -11,7 +11,7 @@ The victim file contains four column like the following example:
 | ---- | ---- | ---- | ---- |
 |  ...      | ... | ...    | ...    |
 
-The input file that our experiments use is under /experiments/data/victim.csv. This file contains all the 327 tests in our experiments. We also provide a file named /data/test.csv which contains only 2 tests for simply use.
+The input file that our experiments use is under /experiments/data/victim.csv. This file contains all the 327 tests in our experiments. We also provide a file named /data/test.csv which contains only 2 tests for simple use.
 
 ```shell
 bash runAll.sh <path_to_input_file>

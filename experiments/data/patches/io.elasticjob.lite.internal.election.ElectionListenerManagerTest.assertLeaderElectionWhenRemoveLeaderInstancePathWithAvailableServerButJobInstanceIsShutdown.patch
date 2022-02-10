@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: io.elasticjob.lite.internal.election.ElectionListenerManagerTest.assertLeaderElectionWhenRemoveLeaderInstancePathWithAvailableServerButJobInstanceIsShutdown
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/elastic-job-lite/elastic-job-lite-core/src/test/java/io/elasticjob/lite/internal/election/ElectionListenerManagerTest.java
+CLEANER: io.elasticjob.lite.internal.election.TestGroup100Case0.test214
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/elastic-job-lite/elastic-job-lite-core/src/test/java/io/elasticjob/lite/internal/election/TestGroup100Case0.java
+POLLUTER: io.elasticjob.lite.internal.instance.ShutdownListenerManagerTest.assertRemoveLocalInstancePathForReconnectedRegistryCenter
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/elastic-job-lite/elastic-job-lite-core/src/test/java/io/elasticjob/lite/internal/instance/ShutdownListenerManagerTest.java
+ORIGINAL CLEANER SIZE: 16
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 154.81900000572205
+==========================
+@@ -93,0 +93,4 @@
++ {
++     io.elasticjob.lite.internal.schedule.JobRegistry jobRegistry0 = io.elasticjob.lite.internal.schedule.JobRegistry.getInstance();
++     jobRegistry0.shutdown("test_job");
++ }

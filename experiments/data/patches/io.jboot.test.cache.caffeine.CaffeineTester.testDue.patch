@@ -1,0 +1,10 @@
+STATUS: NO CLEANERS
+MODIFIED: N/A
+MODIFIED FILE: N/A
+CLEANER: N/A
+CLEANER FILE: N/A
+POLLUTER: io.jboot.test.cache.j2cache.J2CacheTester.testGet
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/jboot/src/test/java/io/jboot/test/cache/j2cache/J2CacheTester.java
+ORIGINAL CLEANER SIZE: N/A
+NEW CLEANER SIZE: N/A
+ELAPSED TIME: 0.0

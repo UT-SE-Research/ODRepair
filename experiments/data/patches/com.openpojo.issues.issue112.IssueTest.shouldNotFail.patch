@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: com.openpojo.issues.issue112.IssueTest.shouldNotFail
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/openpojo/src/test/java/com/openpojo/issues/issue112/IssueTest.java
+CLEANER: com.openpojo.issues.issue112.TestGroup100Case0.test001
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/openpojo/src/test/java/com/openpojo/issues/issue113/TestGroup100Case0.java
+POLLUTER: com.openpojo.log.JavaLoggerTest.testToString
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/openpojo/src/test/java/com/openpojo/log/JavaLoggerTest.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 33.537999868392944
+==========================
+@@ -61,0 +61,3 @@
++ {
++     com.openpojo.log.LoggerFactory.autoDetect();
++ }

@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: org.apache.dubbo.rpc.protocol.dubbo.DubboInvokerAvilableTest.test_Normal_ChannelReadOnly
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-rpc/dubbo-rpc-dubbo/src/test/java/org/apache/dubbo/rpc/protocol/dubbo/DubboInvokerAvilableTest.java
+CLEANER: org.apache.dubbo.rpc.protocol.dubbo.telnet.TestGroup100Case0.test1
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-rpc/dubbo-rpc-dubbo/src/test/java/org/apache/dubbo/rpc/protocol/dubbo/telnet/TestGroup100Case0.java
+POLLUTER: org.apache.dubbo.rpc.protocol.dubbo.DubboInvokerAvilableTest.test_Normal_ChannelReadOnly
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/incubator-dubbo/dubbo-rpc/dubbo-rpc-dubbo/src/test/java/org/apache/dubbo/rpc/protocol/dubbo/DubboInvokerAvilableTest.java
+ORIGINAL CLEANER SIZE: 106
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 223.6599998474121
+==========================
+@@ -78,0 +78,4 @@
++ {
++     org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol dubboProtocol0 = org.apache.dubbo.rpc.protocol.dubbo.DubboProtocol.getDubboProtocol();
++     dubboProtocol0.destroy();
++ }

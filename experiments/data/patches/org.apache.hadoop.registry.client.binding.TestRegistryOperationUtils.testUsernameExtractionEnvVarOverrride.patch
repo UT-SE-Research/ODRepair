@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: org.apache.hadoop.registry.client.binding.TestRegistryOperationUtils.testUsernameExtractionEnvVarOverrride
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-registry/src/test/java/org/apache/hadoop/registry/client/binding/TestRegistryOperationUtils.java
+CLEANER: org.apache.hadoop.registry.client.binding.TestGroup100Case0.test007
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-registry/src/test/java/org/apache/hadoop/registry/client/binding/TestGroup100Case0.java
+POLLUTER: org.apache.hadoop.registry.secure.TestSecureRegistry.testCreateSecureZK
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/hadoop/hadoop-yarn-project/hadoop-yarn/hadoop-yarn-registry/src/test/java/org/apache/hadoop/registry/secure/TestSecureRegistry.java
+ORIGINAL CLEANER SIZE: 6
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 51.72099995613098
+==========================
+@@ -32,0 +32,3 @@
++ {
++     org.apache.hadoop.security.UserGroupInformation.reset();
++ }

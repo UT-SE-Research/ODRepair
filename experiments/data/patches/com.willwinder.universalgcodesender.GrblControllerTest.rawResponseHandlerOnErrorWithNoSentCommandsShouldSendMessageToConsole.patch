@@ -1,0 +1,15 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: com.willwinder.universalgcodesender.GrblControllerTest.rawResponseHandlerOnErrorWithNoSentCommandsShouldSendMessageToConsole
+MODIFIED FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/Universal-G-Code-Sender/ugs-core/test/com/willwinder/universalgcodesender/GrblControllerTest.java
+CLEANER: com.willwinder.universalgcodesender.TestGroup100Case0.test499
+CLEANER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/Universal-G-Code-Sender/ugs-core/test/com/willwinder/universalgcodesender/TestGroup100Case0.java
+POLLUTER: com.willwinder.universalgcodesender.i18n.LocalizationTest.loadLocalizationThatDoesExistShouldLoad
+POLLUTER FILE: /home/anonymous/projects/tools/reseter-finder/exp/_downloads/Universal-G-Code-Sender/ugs-core/test/com/willwinder/universalgcodesender/i18n/LocalizationTest.java
+ORIGINAL CLEANER SIZE: 7
+NEW CLEANER SIZE: 1
+ELAPSED TIME: 28.31500005722046
+==========================
+@@ -1319,0 +1319,3 @@
++ {
++     boolean boolean2 = com.willwinder.universalgcodesender.i18n.Localization.initialize("<G20G90G1X1Y2F200>", "<addListener>");
++ }
