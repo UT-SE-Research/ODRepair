@@ -16,7 +16,56 @@ echo "$currentDir"
 
 chmod +x $currentDir/run_debugging_tools_new.sh
 
+function setup() {
+    mkdir -p repos/ # Stored in directory repos/
+    (
+        cd repos/
 
+	mkdir -p testrunner4iFixPlus/
+        (
+	    cd testrunner4iFixPlus/
+	    # Get right branch of testrunner
+            if [[ ! -d testrunner ]]; then
+                git clone git@github.com:ChopinLi-cp/testrunner.git
+                (
+                    cd testrunner/
+                    git checkout -f testrunner4iFixPlus
+                    mvn clean install -DskipTests
+                )
+            fi
+        )
+
+	mkdir -p idflakies4iFixPlus/
+	(
+            cd idflakies4iFixPlus/
+            # Get current version of iDFlakies
+            if [[ ! -d iDFlakies ]]; then
+                git clone git@github.com:ChopinLi-cp/iDFlakies.git
+                (
+                    cd iDFlakies/
+		    git checkout -f idflakies4iFixPlus
+                    mvn clean install -DskipTests
+                )
+            fi
+        )
+
+	mkdir -p borrowState/
+	(
+	    cd borrowState/
+            # Get current version of xstream
+            if [[ ! -d iDFlakies ]]; then
+                git clone git@github.com:ChopinLi-cp/xstream.git
+                (
+                    cd xstream/
+                    git checkout -f borrowState
+                    mvn clean install -DskipTests
+                )
+            fi
+        )
+    )
+}
+
+setup
 createrootfolder_script=$currentDir"/createrootfolders.sh"
 bash $createrootfolder_script
 
