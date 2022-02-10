@@ -4,13 +4,13 @@
 # NOTE: Use repository https://github.com/ChopinLi-cp/testrunner and branch testrunner4iFixPlus
 # NOTE: Use repository https://github.com/ChopinLi-cp/xstream and branch borrowState
 
-echo "run iFixFlakies on all the projects in inputProj folder, based on the ifixflakies-testdata-uniqueodtest.csv"
+echo "run ODRepair based on the input file which contains the victim."
 
 currentDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" >/dev/null 2>&1 && pwd )"
 echo "$currentDir"
 
 if [[ $1 == "" ]]; then
-    echo "arg1 - full path to the victim csv file (eg. odtest_0.csv)"
+    echo "arg1 - full path to the victim csv file (eg. data/victim.csv)"
     exit
 fi
 
