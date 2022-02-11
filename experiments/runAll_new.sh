@@ -26,7 +26,7 @@ function setup() {
             cd testrunner4iFixPlus/
             # Get right branch of testrunner
             if [[ ! -d testrunner ]]; then
-                git clone git@github.com:ChopinLi-cp/testrunner.git
+                git clone https://github.com/ChopinLi-cp/testrunner
                 (
                     cd testrunner/
                     git checkout -f testrunner4iFixPlus
@@ -40,7 +40,7 @@ function setup() {
             cd idflakies4iFixPlus/
             # Get current version of iDFlakies
             if [[ ! -d iDFlakies ]]; then
-                git clone git@github.com:ChopinLi-cp/iDFlakies.git
+                git clone https://github.com/ChopinLi-cp/iDFlakies
                 (
                     cd iDFlakies/
                     git checkout -f idflakies4iFixPlus
@@ -54,7 +54,7 @@ function setup() {
             cd borrowState/
             # Get current version of xstream
             if [[ ! -d xstream ]]; then
-                git clone git@github.com:ChopinLi-cp/xstream.git
+                git clone https://github.com/ChopinLi-cp/xstream
                 (
                     cd xstream/
                     git checkout -f borrowState
@@ -66,7 +66,7 @@ function setup() {
 
     (
         cd reseter-finder/
-	mvn clean install -DskipTests
+        mvn clean install -DskipTests
     )
 }
 
