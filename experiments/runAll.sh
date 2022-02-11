@@ -20,14 +20,16 @@ chmod +x $currentDir/run.py
 
 chmod +x $currentDir/run-ifixflakies.sh
 
+mkdir -p $currentDir/output
+
 for t in $(cat $1)
 do
-  echo $t > $currentDir/tmp_victim.csv
-  echo -n "" > $currentDir/output/result.csv
-  bash runAll_new.sh $currentDir/tmp_victim.csv
-  cat $currentDir/output/result.csv >> $currentDir/output/overall_results.csv
-  python3 run.py
-  bash run-ifixflakies.sh
-  rm $currentDir/output/result.csv
-  echo $t > $currentDir/tmp_victim.csv
+    echo $t > $currentDir/tmp_victim.csv
+    touch $currentDir/output/result.csv
+    bash runAll_new.sh $currentDir/tmp_victim.csv
+    cat $currentDir/output/result.csv >> $currentDir/output/overall_results.csv
+    python3 run.py
+    bash run-ifixflakies.sh
+    rm $currentDir/output/result.csv
+    echo $t > $currentDir/tmp_victim.csv
 done

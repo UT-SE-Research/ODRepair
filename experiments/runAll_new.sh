@@ -21,10 +21,10 @@ function setup() {
     (
         cd repos/
 
-	mkdir -p testrunner4iFixPlus/
+        mkdir -p testrunner4iFixPlus/
         (
-	    cd testrunner4iFixPlus/
-	    # Get right branch of testrunner
+            cd testrunner4iFixPlus/
+            # Get right branch of testrunner
             if [[ ! -d testrunner ]]; then
                 git clone git@github.com:ChopinLi-cp/testrunner.git
                 (
@@ -35,25 +35,25 @@ function setup() {
             fi
         )
 
-	mkdir -p idflakies4iFixPlus/
-	(
+        mkdir -p idflakies4iFixPlus/
+        (
             cd idflakies4iFixPlus/
             # Get current version of iDFlakies
             if [[ ! -d iDFlakies ]]; then
                 git clone git@github.com:ChopinLi-cp/iDFlakies.git
                 (
                     cd iDFlakies/
-		    git checkout -f idflakies4iFixPlus
+                    git checkout -f idflakies4iFixPlus
                     mvn clean install -DskipTests
                 )
             fi
         )
 
-	mkdir -p borrowState/
-	(
-	    cd borrowState/
+        mkdir -p borrowState/
+        (
+            cd borrowState/
             # Get current version of xstream
-            if [[ ! -d iDFlakies ]]; then
+            if [[ ! -d xstream ]]; then
                 git clone git@github.com:ChopinLi-cp/xstream.git
                 (
                     cd xstream/
@@ -113,5 +113,5 @@ do
     $pom_modify_script $inputProjRoot/$slug
   fi
   $currentDir/run_debugging_tools_new.sh $slug $sha $odtest $module
-  mkdir _downloads
+  mkdir -p _downloads
 done < "$input"

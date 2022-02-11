@@ -19,67 +19,67 @@ rootallFields=$rootDir"/allFields"
 rootdiffFields=$rootDir"/diffFields"
 
  if [ ! -d "$rootdiffs" ]; then
-      echo "rootdiffs: $rootdiffs dose not exit"
+      echo "rootdiffs: $rootdiffs does not exit"
       mkdir -p "$rootdiffs"
  fi
 
  if [ ! -d "$rootdtjsons" ]; then
-      echo "rootdtjsons: $rootdtjsons dose not exit"
+      echo "rootdtjsons: $rootdtjsons does not exit"
       mkdir -p "$rootdtjsons"
  fi
 
  if [ ! -d "$rootlogs" ]; then
-      echo "rootlogs: $rootlogs dose not exit"
+      echo "rootlogs: $rootlogs does not exit"
       mkdir -p "$rootlogs"
  fi
 
  if [ ! -d "$rootmodule" ]; then
-      echo "rootmodule: $rootmodule dose not exit"
+      echo "rootmodule: $rootmodule does not exit"
       mkdir -p "$rootmodule"
  fi
 
  if [ ! -d "$rootoutput" ]; then
-      echo "rootoutput: $rootoutput dose not exit"
+      echo "rootoutput: $rootoutput does not exit"
       mkdir -p "$rootoutput"
  fi
 
  if [ ! -d "$rootpkg" ]; then
-      echo "rootpkg: $rootpkg dose not exit"
+      echo "rootpkg: $rootpkg does not exit"
       mkdir -p "$rootpkg"
  fi
 
  if [ ! -d "$rootroots" ]; then
-      echo "rootroots: $rootroots dose not exit"
+      echo "rootroots: $rootroots does not exit"
       mkdir -p "$rootroots"
  fi
 
  if [ ! -d "$rootsubdiffs" ]; then
-      echo "rootsubdiffs: $rootsubdiffs dose not exit"
+      echo "rootsubdiffs: $rootsubdiffs does not exit"
       mkdir -p "$rootsubdiffs"
  fi
 
  if [ ! -d "$rootsubxmls" ]; then
-      echo "rootsubxmls: $rootsubxmls dose not exit"
+      echo "rootsubxmls: $rootsubxmls does not exit"
       mkdir -p "$rootsubxmls"
  fi
 
  if [ ! -d "$rootreflection" ]; then
-      echo "rootreflection: $rootreflection dose not exit"
+      echo "rootreflection: $rootreflection does not exit"
       mkdir -p "$rootreflection"
  fi
 
  if [ ! -d "$rootxmls" ]; then
-      echo "rootxmls: $rootxmls dose not exit"
+      echo "rootxmls: $rootxmls does not exit"
       mkdir -p "$rootxmls"
  fi
 
  if [ ! -d "$rootallFields" ]; then
-      echo "rootallFields: $rootallFields dose not exit"
+      echo "rootallFields: $rootallFields does not exit"
       mkdir -p "$rootallFields"
  fi
 
  if [ ! -d "$rootdiffFields" ]; then
-      echo "rootdiffFields: $rootdiffFields dose not exit"
+      echo "rootdiffFields: $rootdiffFields does not exit"
       mkdir -p "$rootdiffFields"
  fi
 

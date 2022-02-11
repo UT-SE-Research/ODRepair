@@ -78,10 +78,10 @@ for l in $(cat output/result.csv); do
             git checkout -f ${sha}
             ${CURRENTDIR}/repos/iFixFlakies/pom-modify/modify-project.sh ${module}/
 
+            # Handling some specific options
             if [[ ${projdir} == 'geronimo-batchee' ]]; then
                 sed -i 's;<version>0.10;<version>0.11;' pom.xml
             fi
-
             if [[ ${projdir} == 'spring-boot' ]]; then
                 sed -i 's;${disable.checks};true;' pom.xml
             fi
