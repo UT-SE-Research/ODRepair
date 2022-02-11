@@ -62,6 +62,16 @@ function setup() {
                 )
             fi
         )
+
+	(
+	    if [[ ! -d reseter-finder ]]; then
+                git clone git@github.com:Chenguang-Zhu/reseter-finder.git
+		(
+		    cd reseter-finder/
+		    mvn clean install -DskipTests 
+	        )
+	    fi
+	)
     )
 }
 
