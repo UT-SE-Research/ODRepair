@@ -17,16 +17,16 @@ echo "rootdir: $rootDir"
 projDir=$rootDir"/$3/"$slug
 
  if [ ! -d "$projDir" ]; then
-      echo "projDir: $projDir dose not exit"
+      echo "projDir: $projDir does not exist"
       IFS='/'
       #Read the split words into an array based on comma delimiter
       read -a strarr <<< "$slug"
       rootProj=$rootDir"/$3/"${strarr[0]}
       if [ -d "$rootProj" ]; then
-        echo "rootProj $rootProj exits "
+        echo "rootProj $rootProj exists "
         mkdir -p "$projDir"
       else
-        echo "rootProj $rootProj dose not exit"
+        echo "rootProj $rootProj does not exist"
         mkdir -p "$rootProj"
         mkdir -p "$projDir"
       fi
@@ -34,11 +34,11 @@ projDir=$rootDir"/$3/"$slug
  
 xmlTestDir=$projDir"/"$testName
  if [ -d "$xmlTestDir" ]; then
-      echo "xmlTestDir: $xmlTestDir exits"
+      echo "xmlTestDir: $xmlTestDir exists"
       rm -rf "$xmlTestDir"      
       mkdir -p "$xmlTestDir"
  else  
-      echo "xmlTestDir: $xmlTestDir dose not exit"
+      echo "xmlTestDir: $xmlTestDir does not exist"
       mkdir -p "$xmlTestDir"
  fi
 
