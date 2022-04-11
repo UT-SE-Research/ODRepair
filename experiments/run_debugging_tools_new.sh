@@ -6,7 +6,7 @@ echo "Starting run_debugging_tools.sh"
 git rev-parse HEAD
 date
 
-if [[ $1 == "" ]] || [[ $2 == "" ]] || [[ $3 == "" ]]; then
+if [[ $1 == "" ]] || [[ $2 == "" ]] || [[ $3 == "" ]] || [[ $4 == "" ]]; then
     echo "arg1 - GitHub SLUG"
     echo "arg2 - sha"
     echo "arg3 - Test name"
@@ -99,7 +99,7 @@ printf '%s' "$slug,$sha,$moduleName0,$testName," >> $output
 tmpfile=$rootScriptDir"/tmp"
 # execute iFixPlus
 MVNOPTIONS="-Ddependency-check.skip=true -Denforcer.skip=true -Drat.skip=true -Dmdep.analyze.skip=true -Dmaven.javadoc.skip=true -Dgpg.skip -Dlicense.skip=true"
-TESTRUNNERVERSION="1.2-SNAPSHOT"
+TESTRUNNERVERSION="1.3-SNAPSHOT"
 
 mvn testrunner:testplugin ${MVNOPTIONS} -Ddetector.detector_type=random-class-method -Ddt.detector.original_order.all_must_pass=false -Dtestplugin.runner.capture_state=true -Dtestplugin.javaagent="${HOME}/.m2/repository/edu/illinois/cs/testrunner-running/${TESTRUNNERVERSION}/testrunner-running-${TESTRUNNERVERSION}.jar=$xmlFold,$subxmlFold,$rootFold,$pkgFile,$diffFold,$slug,$testName,$output,$allFieldsFold,$diffFieldsFold,$subdiffsFold,$tmpfile,$reflectionFold" -Dtestplugin.className=edu.illinois.cs.dt.tools.utility.iFixPlusPlugin -Dreplay.path=$json -Dreplay.path2=$json2 -Dreplay.dtname=$testName -Dreplay.subxmlFold=$subxmlFold -Dreplay.slug=$slug -Dreplay.output=$output -Dreplay.module=$moduleName -Dreplay.tmpfile=$tmpfile -Dreplay.diffFieldsFold=$diffFieldsFold -Dreplay.reflectionFold=$reflectionFold -Dtestrunner.interleave=$interleave > $logFile 2>&1
 
