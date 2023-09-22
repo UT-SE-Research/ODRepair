@@ -1,0 +1,16 @@
+STATUS: INLINE SUCCESSFUL
+MODIFIED: com.networknt.handler.HandlerTest.validConfig_init_handlersCreated
+MODIFIED FILE: /home/chopinli/tmp/ODRepair/experiments/_downloads/light-4j/handler/src/test/java/com/networknt/handler/HandlerTest.java
+CLEANER: com.networknt.handler.TestGroup100Case0.test099
+CLEANER FILE: /home/chopinli/tmp/ODRepair/experiments/_downloads/light-4j/handler/src/test/java/com/networknt/handler/TestGroup100Case0.java
+POLLUTER: com.networknt.handler.HandlerTest.invalidMethod_init_throws
+POLLUTER FILE: /home/chopinli/tmp/ODRepair/experiments/_downloads/light-4j/handler/src/test/java/com/networknt/handler/HandlerTest.java
+ORIGINAL CLEANER SIZE: 10
+NEW CLEANER SIZE: 2
+ELAPSED TIME: 41.21199989318848
+==========================
+@@ -51,0 +51,4 @@
++ {
++     com.networknt.handler.config.HandlerConfig handlerConfig0 = com.networknt.handler.LightHttpHandler.config;
++     com.networknt.handler.Handler.config = handlerConfig0;
++ }
