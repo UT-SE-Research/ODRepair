@@ -21,6 +21,8 @@ function setup() {
             git clone https://github.com/idflakies/iDFlakies
             (
                 cd iDFlakies/
+                # This is because old ifixflakies depends on 1.2.0-SNAPSHOT of iDFlakies
+                git checkout -f eeaed60
                 mvn clean install -DskipTests
             )
         fi
